@@ -64,6 +64,8 @@ void DrawMenu(u8 model, AppTextManager *ATM)
             break;
         }
     }
+
+    ATM->DrawText(StrId_ExitApp, 2, 223);
 }
 
 

@@ -1,4 +1,4 @@
-// by okawaffles, 2021 - 2023
+// by okawaffles, 2021 - 2024
 
 #include "common.hpp"
 #include "control.hpp"
@@ -13,8 +13,8 @@
 #define SCREEN_WIDTH_BOTTOM 320
 #define SCREEN_HEIGHT 240
 
-//#define __DEBUG
-//#define __DEBUGCONSOLE
+// #define __DEBUG
+// #define __DEBUGCONSOLE
 
 // variables
 bool n3ds = false;

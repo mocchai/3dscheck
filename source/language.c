@@ -98,6 +98,10 @@ const char* const g_strings[StrId_Max][64] =
     [StrId_SoundTest] = {
         LANG_JP("スピーカーテスト"),
         LANG_EN("Sound Test")
+    },
+    [StrId_ExitApp] = {
+        LANG_JP("STARTを押すでHBLに戻る"),
+        LANG_EN("Press START to exit")
     }
 };
 
