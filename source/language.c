@@ -102,6 +102,14 @@ const char* const g_strings[StrId_Max][64] =
     [StrId_ExitApp] = {
         LANG_JP("STARTを押すでHBLに戻る"),
         LANG_EN("Press START to exit")
+    },
+    [StrId_Back] = {
+        LANG_JP("を押すで戻る"),
+        LANG_EN("Press  to go back")
+    },
+    [StrId_BackStart] = {
+        LANG_JP("START+を押すで戻る"),
+        LANG_EN("Press START+ to go back")
     }
 };
 

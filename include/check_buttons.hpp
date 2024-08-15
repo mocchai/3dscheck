@@ -8,4 +8,4 @@
 #include "control.hpp"
 
 void DrawButtonCheckTop(u8 systemModel, AppTextManager *ATM);
-void DrawButtonCheckBottom();
+void DrawButtonCheckBottom(AppTextManager *ATM);

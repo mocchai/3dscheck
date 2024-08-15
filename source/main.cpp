@@ -97,7 +97,7 @@ int main()
         if (FN == MAIN_MENU) DrawMenuBottom(systemModel, &ATM);
         if (FN == SCREEN_CHECK_3D || FN == SCREEN_CHECK_2D) DrawScreenCheckBottom(&ATM);
         if (FN == TOUCHSCREEN_CHECK) DrawTouchscreenCheckBottom();
-        if (FN == BUTTONS_CHECK) DrawButtonCheckBottom();
+        if (FN == BUTTONS_CHECK) DrawButtonCheckBottom(&ATM);
 #endif
 
         // 3D screen is only needed for screen check
