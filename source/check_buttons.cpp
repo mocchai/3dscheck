@@ -45,11 +45,41 @@ void DrawButtonCheckTop(u8 systemModel, AppTextManager *ATM)
     // A
     if (ButtonHeld(KEY_A)) GFX_DrawRect(335, 120, 355, 140, Colors_Green);
     else GFX_DrawRect(335, 120, 355, 140, Colors_Red);
+
+    // SELECT
+    if (ButtonHeld(KEY_SELECT)) GFX_DrawRect(50, 200, 100, 220, Colors_Green);
+    else GFX_DrawRect(50, 200, 100, 220, Colors_Red);
+
+    // START
+    if (ButtonHeld(KEY_START)) GFX_DrawRect(300, 200, 350, 220, Colors_Green);
+    else GFX_DrawRect(300, 200, 350, 220, Colors_Red);
+
+
+    // Draw text!!!!
+    ATM->DrawButton(Button_L, 65, 48, C2D_WithColor, 0.75f, 0.75f);
+    ATM->DrawButton(Button_R, 317, 48, C2D_WithColor, 0.75f, 0.75f);
+
+    ATM->DrawButton(Button_DPAD_UP, 66, 103);
+    ATM->DrawButton(Button_DPAD_DOWN, 66, 143);
+    ATM->DrawButton(Button_DPAD_LEFT, 46, 123);
+    ATM->DrawButton(Button_DPAD_RIGHT, 86, 123);
+
+    ATM->DrawButton(Button_X, 317, 99, C2D_WithColor, 0.75f, 0.75f);
+    ATM->DrawButton(Button_B, 317, 139, C2D_WithColor, 0.75f, 0.75f);
+    ATM->DrawButton(Button_Y, 297, 119, C2D_WithColor, 0.75f, 0.75f);
+    ATM->DrawButton(Button_A, 337, 119, C2D_WithColor, 0.75f, 0.75f);
+
+    ATM->DrawButton(Button_SELECT, 51, 203);
+    ATM->DrawButton(Button_START, 305, 203);
 }
 
 void DrawButtonCheckBottom(AppTextManager *ATM)
 {
     ATM->DrawText(StrId_BackStart, 2, 2);
+
+    // An alternative way to go back (1,1 because 0,0 will always trigger)
+    UpdateTouch();
+    if (TouchIsWithin(1, 1, 180, 50)) SetCurrentFunction(MAIN_MENU);
 
     return;
 }

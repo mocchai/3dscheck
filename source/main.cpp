@@ -141,7 +141,7 @@ int main()
         {
             if (FN != BUTTONS_CHECK)
                 SetCurrentFunction(MAIN_MENU);
-            else if (ButtonHeld(KEY_START)) 
+            else if (ButtonHeld(KEY_START))
                 SetCurrentFunction(MAIN_MENU);
         }
 

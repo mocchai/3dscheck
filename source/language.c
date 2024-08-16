@@ -109,7 +109,7 @@ const char* const g_strings[StrId_Max][64] =
     },
     [StrId_BackStart] = {
         LANG_JP("START+を押すで戻る"),
-        LANG_EN("Press START+ to go back")
+        LANG_EN("Press START+ to go back\nor tap here to go back.")
     }
 };
 

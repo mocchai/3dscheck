@@ -23,7 +23,7 @@ bool hasGottenSerial = false;
 u8 batteryLevel;
 u8 temperature;
 u8 serialNumber[0xF];
-std::stringstream sn;
+std::stringstream serial_number;
 
 // draw the main menu
 void DrawMenu(u8 model, AppTextManager *ATM)
@@ -139,32 +139,32 @@ void DrawMenuBottom(u8 model, AppTextManager *ATM)
         get+draw serial number, battery, and temperature
     */
     MCUHWC_GetBatteryLevel(&batteryLevel);
-    std::stringstream bl;
-    bl << textGetString(StrId_Battery, ATM->language) << std::to_string(batteryLevel) << "%";
+    std::stringstream battery_level;
+    battery_level << textGetString(StrId_Battery, ATM->language) << std::to_string(batteryLevel) << "%";
     // use constant-refresh buffer so i dont KILL THE 3DS!!!
     ATM->RefreshCR();
-    ATM->ParseCR(bl.str().c_str());
+    ATM->ParseCR(battery_level.str().c_str());
     ATM->DrawCR(2, 205, C2D_WithColor, 0.5f, 0.5f, Colors_White);
 
 
     // serial number
     if (!hasGottenSerial) {
         // serial number time
-        std::stringstream fullsn;
+        std::stringstream full_serial_number;
     
         CFGI_SecureInfoGetSerialNumber(serialNumber);
     
         int i = 0;
         while (serialNumber[i] != 0x00) {
-            fullsn << serialNumber[i]; 
+            full_serial_number << serialNumber[i]; 
             i++;
         }
-        sn << textGetString(StrId_SerialNumber, ATM->language) << fullsn.str();
+        serial_number << textGetString(StrId_SerialNumber, ATM->language) << full_serial_number.str();
         hasGottenSerial = true;
     }
 
     ATM->RefreshCR();
-    ATM->ParseCR(sn.str().c_str());
+    ATM->ParseCR(serial_number.str().c_str());
     ATM->DrawCR(2, 185, C2D_WithColor, 0.5f, 0.5f, Colors_White);
 
 

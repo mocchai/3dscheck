@@ -14,7 +14,7 @@ public:
     AppTextManager(u8 systemLanguage);
     ~AppTextManager();
     void DrawText(StrId id, float x, float y, float z = 0.0f, u32 flags = C2D_WithColor, float scaleX = 0.5f, float scaleY = 0.5f, u32 color = Colors_White);
-    void DrawButton(unsigned int id, float x, float y, u32 flags, float scaleX, float scaleY, u32 color);
+    void DrawButton(unsigned int id, float x, float y, u32 flags = C2D_WithColor, float scaleX = 0.5f, float scaleY = 0.5f, u32 color = Colors_White);
 
     // CRBuffer is the "Constant-Refresh" buffer.
     // mainly intended for things that are possibly changing every frame,

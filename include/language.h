@@ -82,6 +82,24 @@ const StrId langValuesList[64] = {
     StrId_BackStart,
 };
 
+typedef enum 
+{
+    Button_A,
+    Button_B,
+    Button_X,
+    Button_Y,
+    Button_DPAD_UP,
+    Button_DPAD_DOWN,
+    Button_DPAD_LEFT,
+    Button_DPAD_RIGHT,
+    Button_L,
+    Button_R,
+    Button_SELECT,
+    Button_START,
+    Button_ZL,
+    Button_ZR
+} Button;
+
 // buttons for button check
 const char *returnBtn(int id);
 
